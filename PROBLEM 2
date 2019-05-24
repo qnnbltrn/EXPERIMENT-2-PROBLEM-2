@@ -1,0 +1,39 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+    const int week = 7, prov = 3;
+    int temp[prov][week];
+    
+    cout << "Enter the values of the temperature for the provinces:";
+    cout << "\n";
+    
+    for (int t = 0; t < prov; ++t)
+    {
+        for (int v = 0; v < week; ++v)
+        {
+            cout << "\n";
+            cout << "Province " << t + 1 << ", Day " << v + 1 << ":";
+            cin >> temp[t][v];
+            cout << "\n";
+        }
+    }
+    
+    cout << "\n";
+    cout << "The values are:";
+    cout << "\n";
+    
+    for (int t = 0; t < prov; ++t)
+    {
+        for (int v = 0; v < week; ++v)
+        {
+            cout << "Province " << t + 1 << ", Day " << v + 1 << " = " << temp[t][v] << endl;
+            cout << "\n";
+        }
+    }
+_getch ();
+return 0;
+}
